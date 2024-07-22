@@ -1,8 +1,5 @@
 # Different-Sorting-Algorithms
 
-Sure, here's a detailed section for Bubble Sort to include in your README file on GitHub:
-
----
 
 ## 1. Bubble Sort
 
