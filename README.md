@@ -69,3 +69,72 @@ public class BubbleSort{
 }
 ```
 
+
+## 2. Selection Sort
+
+### Concept
+- In Selection Sort, we repeatedly find the minimum element from the unsorted portion of the array and move it to the sorted portion.
+- With each iteration, the smallest element in the unsorted part is selected and swapped with the first unsorted element.
+
+### Example
+Given an array: [5, 3, 8, 4, 2]
+
+- **Initial State**: [5, 3, 8, 4, 2]
+- **First Pass**:
+  - Find the minimum element (2).
+  - Swap 2 with the first element: [2, 3, 8, 4, 5]
+- **Second Pass**:
+  - Find the next minimum element (3).
+  - Swap 3 with the second element: [2, 3, 8, 4, 5]
+- **Third Pass**:
+  - Find the next minimum element (4).
+  - Swap 4 with the third element: [2, 3, 4, 8, 5]
+- **Fourth Pass**:
+  - Find the next minimum element (5).
+  - Swap 5 with the fourth element: [2, 3, 4, 5, 8]
+
+The array is now sorted: [2, 3, 4, 5, 8]
+
+### Time Complexity
+- **Best Case**: \(O(n^2)\)
+- **Average Case**: \(O(n^2)\)
+- **Worst Case**: \(O(n^2)\)
+
+### Space Complexity
+- \(O(1)\) (in-place sorting)
+
+### Advantages of Selection Sort
+- **Simplicity**: Easy to understand and implement.
+- **Small Data Sets**: Works well for small datasets.
+- **Memory Efficiency**: Requires only \(O(1)\) extra space.
+
+### Disadvantages
+- **Inefficiency**: Not suitable for large datasets due to its quadratic time complexity.
+- **Stability**: Not a stable sort, as it may change the relative order of equal elements.
+
+### Usage Scenarios
+- **Small Arrays**: When dealing with small arrays where the overhead of more complex algorithms is not justified.
+- **Memory Constraints**: When additional memory is a concern, as Selection Sort uses a constant amount of space.
+
+
+### Sample Java Implementation
+
+```java
+public class SelectionSort{
+
+    public static void selectionsort(int[] arr){
+        
+       for(int i =0; i<arr.length-1;i++){
+        int min =i;
+        for(int j=i+1;j<arr.length;j++){
+            if(arr[j]<arr[min]){
+                min=j;
+            }
+        }
+        if(min!=i){
+            swap(arr,i,min);
+        }
+       }
+    }
+```
+
