@@ -1,4 +1,20 @@
-# Different-Sorting-Algorithms
+# Sorting Algorithms 
+
+This repository provides implementations and detailed explanations of various sorting algorithms. It covers the fundamental concepts, pseudocode, time complexity, space complexity, advantages, disadvantages, and usage scenarios for each algorithm. Ideal for students and professionals looking to deepen their understanding of sorting techniques and improve their coding skills.
+
+## Contents
+
+- **Bubble Sort**: Basic sorting algorithm with adjacent swaps.
+- **Selection Sort**: Finds the minimum element and places it in the correct position.
+- **Insertion Sort**: Builds the sorted array one element at a time.
+- **And more...**
+
+Each algorithm includes:
+- **Conceptual Overview**
+- **Example Walkthrough**
+- **Java Implementation**
+- **Complexity Analysis**
+- **Practical Use Cases**
 
 
 ## 1. Bubble Sort
