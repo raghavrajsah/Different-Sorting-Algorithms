@@ -60,39 +60,29 @@ end procedure
 - **Small Arrays**: When dealing with very small arrays where the overhead of more complex algorithms is not justified.
 - **Nearly Sorted Arrays**: When the array is already or almost sorted, Bubble Sort can be efficient with its best-case time complexity of \(O(n)\).
 
----
 
 ### Sample Java Implementation
 
 Here's a sample Java implementation of Bubble Sort:
 
 ```java
-public class BubbleSort {
-    public static void bubbleSort(int[] array) {
-        int n = array.length;
-        boolean swapped;
-        do {
-            swapped = false;
-            for (int i = 1; i < n; i++) {
-                if (array[i - 1] > array[i]) {
-                    // Swap array[i-1] and array[i]
-                    int temp = array[i - 1];
-                    array[i - 1] = array[i];
-                    array[i] = temp;
-                    swapped = true;
+public class BubbleSort{
+
+    public static void bubblesort(int[] arr){
+
+        for(int i=0;i<arr.length;i++){
+            for(int j=0; j<arr.length-1;j++){
+                if(arr[j]>arr[j+1]){
+                    swap(arr, j,j+1);
                 }
             }
-            n--; // Reduce the range of the next pass
-        } while (swapped);
-    }
-
-    public static void main(String[] args) {
-        int[] nums = {5, 3, 8, 4, 2};
-        bubbleSort(nums);
-        for (int num : nums) {
-            System.out.print(num + " ");
         }
     }
+    public static void swap(int[] arr,int a, int b){
+        int c = arr[a];
+        arr[a]=arr[b];
+        arr[b]=c;
+    }    
 }
 ```
 
