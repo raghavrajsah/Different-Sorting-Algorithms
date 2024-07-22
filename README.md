@@ -23,23 +23,6 @@ Given an array: [5, 3, 8, 4, 2]
 
 Repeat the process until the array is sorted: [2, 3, 4, 5, 8]
 
-### Pseudocode
-```
-procedure bubbleSort(A: list of sortable items)
-    n = length(A)
-    repeat
-        swapped = false
-        for i = 1 to n-1 inclusive do
-            if A[i-1] > A[i] then
-                swap(A[i-1], A[i])
-                swapped = true
-            end if
-        end for
-        n = n - 1
-    until not swapped
-end procedure
-```
-
 ### Time Complexity
 - **Best Case**: \(O(n)\) (when the array is already sorted)
 - **Average Case**: \(O(n^2)\)
