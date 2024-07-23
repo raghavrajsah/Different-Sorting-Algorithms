@@ -154,3 +154,76 @@ public class SelectionSort{
     }
 ```
 
+Sure, here's a detailed section for Insertion Sort to include in your README file on GitHub:
+
+---
+
+## 3. Insertion Sort
+
+### Concept
+- In Insertion Sort, we build the sorted array one item at a time. 
+- We take each element from the unsorted portion and insert it into its correct position in the sorted portion.
+
+### Example
+Given an array: [5, 3, 8, 4, 2]
+
+- **Initial State**: [5, 3, 8, 4, 2]
+- **First Pass**: (3)
+  - Take 3 and compare with 5.
+  - Insert 3 before 5: [3, 5, 8, 4, 2]
+- **Second Pass**: (8)
+  - Take 8 and compare with 5. No change.
+- **Third Pass**: (4)
+  - Take 4 and compare with 8. Swap to get [3, 5, 4, 8, 2]
+  - Compare 4 with 5. Swap to get [3, 4, 5, 8, 2]
+- **Fourth Pass**: (2)
+  - Take 2 and compare with 8. Swap to get [3, 4, 5, 2, 8]
+  - Compare 2 with 5. Swap to get [3, 4, 2, 5, 8]
+  - Compare 2 with 4. Swap to get [3, 2, 4, 5, 8]
+  - Compare 2 with 3. Swap to get [2, 3, 4, 5, 8]
+
+The array is now sorted: [2, 3, 4, 5, 8]
+
+### Time Complexity
+- **Best Case**: \(O(n)\) (when the array is already sorted)
+- **Average Case**: \(O(n^2)\)
+- **Worst Case**: \(O(n^2)\)
+
+### Space Complexity
+- \(O(1)\) (in-place sorting)
+
+### Advantages of Insertion Sort
+- **Simplicity**: Easy to understand and implement.
+- **Small Data Sets**: Efficient for small datasets or lists that are nearly sorted.
+- **Adaptive**: Efficient for data that is already mostly sorted. Performs well with small or partially sorted arrays.
+- **Stable**: Maintains the relative order of equal elements.
+
+### Disadvantages
+- **Inefficiency**: Not suitable for large datasets due to its quadratic time complexity.
+
+### Usage Scenarios
+- **Small Arrays**: When dealing with small arrays where the overhead of more complex algorithms is not justified.
+- **Nearly Sorted Arrays**: When the array is already or almost sorted, Insertion Sort can be very efficient.
+- **Real-time Systems**: Where sorting needs to be done in small increments as data arrives.
+
+---
+
+### Sample Java Implementation
+
+Here's a sample Java implementation of Insertion Sort:
+
+```java
+    public static void insertionsort(int[] arr){
+
+        for(int i =1; i<arr.length;i++){
+            int j=i;
+            while(j>0 && arr[j-1]>arr[j]){
+                swap(arr, j, j-1);
+                j--;
+            }
+
+        }
+    }
+```
+
+
